@@ -9,6 +9,7 @@ export default defineConfig({
         { src: 'img', dest: '' },
         { src: 'svg', dest: '' },
         { src: 'KN LOGO.png', dest: '' },
+        { src: '.nojekyll', dest: '' },
       ],
     }),
   ],
