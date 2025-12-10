@@ -29,7 +29,11 @@
 /*	01) Base
 /*------------------------------------------------------------------*/
 :root{
-	--mc: #3452ff;
+	--mc: #7C3AED;
+	--bg: #0b1020;
+	--surface: #121826;
+	--text: #e5e7eb;
+	--muted: #94a3b8;
 }
 html{
 	overflow-x: hidden;
@@ -42,12 +46,13 @@ html{
 	box-sizing: border-box;
 }
 body{
-	font-family: 'Jost',sans-serif;
-	font-size: 18px;
-	letter-spacing: 0;
-	font-weight: 400;
-	color: #0b0a0c;
-	position: relative;
+    font-family: 'Jost',sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: var(--text);
+    background: linear-gradient(180deg, var(--bg) 0%, #0e1428 100%);
+    position: relative;
 }
 [class^="deebo_fn_"]{
 	width: 100%;
@@ -202,7 +207,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 	position: absolute;
 	z-index: 1;
 	width: 30%;
-	background-color: var(--mc);
+	background: linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%);
 	clip-path: polygon(100% 0, 80% 50%, 100% 100%, 0 100%, 0 0);
 	top: 0;
 	left: -30%;
@@ -213,7 +218,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 	position: absolute;
 	z-index: 1;
 	width: 30%;
-	background-color: #070707;
+	background: linear-gradient(135deg, #0F172A 0%, #1F2937 100%);
 	clip-path: polygon(20% 0, 100% 0, 100% 50%, 100% 100%, 20% 100%, 0 50%);
 	top: 0;
 	right: -30%;
@@ -409,14 +414,15 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 	background-color: var(--mc);
 }
 .deebo_fn__cv .cv__content section{
-	width: 100%;
-	padding: 30px;
-	background-color: #191919;
-	margin-bottom: 30px;
-	box-shadow: 0px 3px 4px rgb(0 0 0 / 30%);
-	border-radius: 10px;
-	float: left;
-	clear: both;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--surface);
+    margin-bottom: 30px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 14px;
+    float: left;
+    clear: both;
 }
 .deebo_fn__cv .cv__content section:last-child{
 	margin-bottom: 0;
@@ -1950,6 +1956,34 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 	.fn__nav .prev{padding-left: 66px;}
 	.fn__nav .prev .arrow_wrapper{left: 20px;}
 }
+
+.fn__btn{display:inline-block;padding:10px 16px;border:none;border-radius:4px;cursor:pointer;transition:background-color .2s ease}
+.fn__btn.primary{background-color:#22c55e;color:#fff;box-shadow:0 6px 14px rgba(34,197,94,.35)}
+.fn__btn.primary:hover{background-color:#16a34a;transform:translateY(-1px)}
+.fn__btn.danger{background-color:#ef4444;color:#fff;box-shadow:0 6px 14px rgba(239,68,68,.35)}
+.fn__btn.danger:hover{background-color:#dc2626;transform:translateY(-1px)}
+
+.fn__btn.secondary{background-color:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.fn__btn.secondary:hover{background-color:rgba(255,255,255,.12)}
+
+.reveal{opacity:0;transform:translateY(24px)}
+.reveal.visible{opacity:1;transform:none;transition:opacity .4s ease, transform .4s ease;will-change:opacity, transform}
+
+.skill_card{width:120px;height:120px;border-radius:12px;border:1px solid rgba(0,0,0,.08);background-color:#ffffff;box-shadow:0 6px 16px rgba(0,0,0,.10);transition:transform .2s ease, box-shadow .2s ease}
+.skill_card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+
+.project_card{border:1px solid rgba(255,255,255,.08);border-radius:14px;background-color:#0f172a;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+
+.deebo_fn__cv .cv__content section#skills{background-color:#ffffff;color:#111;border:1px solid rgba(0,0,0,.06);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.deebo_fn__cv .cv__content section#skills .section_title h3{color:#0f172a}
+
+.cv__topnav{position:sticky;top:0;z-index:30;display:flex;gap:16px;align-items:center;padding:10px 20px;background:linear-gradient(90deg,#7C3AED,#06B6D4);border-radius:8px;color:#fff}
+.cv__topnav a{color:#fff;text-decoration:none;font-weight:600;opacity:.9;padding:8px 10px;border-radius:6px;border-bottom:2px solid transparent}
+.cv__topnav a:hover{opacity:1;background-color:rgba(255,255,255,.15)}
+.cv__topnav a.active{background-color:rgba(255,255,255,.18);border-bottom-color:#fff}
+
+.deebo_fn__cv.no-left .cv__header{display:none}
+.deebo_fn__cv.no-left .cv__content{left:50px;right:50px;width:auto}
 
 @media(max-width: 370px){
 	.fn__nav .text{display: none;}
