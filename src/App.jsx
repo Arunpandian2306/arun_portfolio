@@ -59,7 +59,7 @@ export default function App() {
   const [isLight, setIsLight] = useState(false)
   const emailInited = useRef(false)
   const roles = useMemo(
-    () => ['Backend Developer', 'API Developer', 'Database Designer'],
+    ['Backend Developer', 'API Developer', 'Database Designer', 'Manula Tester', 'Database Tester'],
     []
   )
 
