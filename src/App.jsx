@@ -200,7 +200,7 @@ export default function App() {
                       <RotatingHeadline words={roles} interval={2500} />
                     </h5>
                     <TypingText text={
-                      `As a Backend Developer with 2.5 years of product-based startup experience, I focus on building efficient, scalable, and secure systems that deliver real user impact. I thrive in fast-moving environments, solving complex challenges and collaborating closely with teams to bring ideas to life.
+                      `As a Backend Developer with 3 years of product-based startup experience, I focus on building efficient, scalable, and secure systems that deliver real user impact. I thrive in fast-moving environments, solving complex challenges and collaborating closely with teams to bring ideas to life.
 
 With modern AI development tools like Cursor and Trae, I can accelerate development and build end-to-end solutions rapidly — from backend services to fully functional features. Even though my core expertise is backend engineering, I have successfully developed React Native applications, demonstrating my ability to adapt and contribute across the full stack.
 
